@@ -135,7 +135,7 @@ $(function() {
 </script> -->
 <script>
     // Create a Stripe client.
-var stripe = Stripe('{{ env("STRIPE_KEY") }}');
+var stripe = Stripe('pk_test_51OTn9tSDO2xiPnDDbZt1tR7aW1xH4SKGBCJcGK8MQ7GePD5FJJNSwPc7kFOrbsRS0EmA4M2gHcFb4wrSHUg3AIs000LscWnjuh');
 
 // Create an instance of Elements.
 var elements = stripe.elements();
@@ -160,6 +160,7 @@ var style = {
 };
 
 // Create an instance of the card Element.
+//var card = elements.create('card', {style: style});
 var card = elements.create('card', {hidePostalCode: true,style: style});
 
 // Add an instance of the card Element into the `card-element` <div>.
